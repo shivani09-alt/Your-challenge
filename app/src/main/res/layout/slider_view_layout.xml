@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dimen10"
+    android:background="@color/white"
+    android:layout_marginStart="@dimen/dimen10"
+    android:layout_marginEnd="@dimen/dimen10"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen20"
+        android:gravity="center"
+        android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile"
+        android:layout_width="@dimen/dimen100"
+        android:layout_height="@dimen/dimen100"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/textSize18"
+            android:layout_marginTop="@dimen/dimen10"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize14"
+            android:layout_marginTop="@dimen/dimen10"
+            />
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFB3B1B1"
+            android:textSize="@dimen/textSize14"
+            />
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

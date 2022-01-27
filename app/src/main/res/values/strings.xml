@@ -1,0 +1,10 @@
+<resources >
+    <string name="app_name">Your Challenges</string>
+    <string name="nav_open">Open navigation drawer</string>
+    <string name="nav_close">Close navigation drawer</string>
+    <string name="product">Product</string>
+    <string name="download">Download</string>
+    <string name="pricing">Pricing</string>
+    <string name="your_challenge">Your Challenge</string>
+
+</resources>

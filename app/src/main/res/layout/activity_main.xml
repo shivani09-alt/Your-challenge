@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+<androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+    android:layout_marginStart="@dimen/dimen15"
+    android:layout_marginEnd="@dimen/dimen15"
+    android:layout_marginTop="@dimen/dimen15"
+    android:id="@+id/drawerLayout"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+     <ProgressBar
+         android:id="@+id/progressBar"
+         android:layout_width="@dimen/dimen80"
+         android:layout_height="@dimen/dimen80"
+         android:indeterminate="true"
+         android:layout_centerInParent="true"
+         android:progressDrawable="@drawable/circular_progress_bar"
+         android:indeterminateDrawable="@drawable/circular_progress_bar"
+        />
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+         <androidx.appcompat.widget.Toolbar
+             android:id="@+id/toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="?attr/actionBarSize"
+             android:elevation="4dp">
+             <TextView
+                 android:id="@+id/userName"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/black"
+                 android:text="@string/your_challenge"
+                 android:textSize="@dimen/textSize18"
+                 android:layout_gravity="start"
+                 android:layout_margin="@dimen/dimen15"
+                 android:textStyle="bold"/>
+         </androidx.appcompat.widget.Toolbar>
+
+          <androidx.core.widget.NestedScrollView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:id="@+id/nestedScrollView"
+              android:fillViewport="true"
+              android:visibility="gone"
+
+              >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+             >
+
+               <ImageView
+                   android:id="@+id/swipeRight"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentLeft="true"
+                   android:layout_centerInParent="true"
+                   android:src="@drawable/ic_left" />
+
+               <androidx.viewpager2.widget.ViewPager2
+                   android:id="@+id/viewPager"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dimen300"
+
+
+                   android:layout_marginStart="@dimen/dimen40"
+                   android:layout_marginTop="@dimen/dimen40"
+                   android:layout_marginEnd="@dimen/dimen40"
+                   android:layout_marginBottom="@dimen/dimen40" />
+
+               <ImageView
+                   android:id="@+id/swipeLeft"
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerInParent="true"
+                   android:src="@drawable/ic_right" />
+
+          </RelativeLayout>
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintLeft_toLeftOf="parent"
+              android:layout_marginStart="@dimen/dimen10"
+              android:layout_marginEnd="@dimen/dimen10"
+              app:layout_constraintRight_toRightOf="parent"/>
+               </LinearLayout>
+          </androidx.core.widget.NestedScrollView>
+     </LinearLayout>
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_item"
+        android:layout_marginStart="@dimen/dimen15"
+        android:layout_marginEnd="@dimen/dimen15"
+        android:layout_marginTop="@dimen/dimen15"
+        app:headerLayout="@layout/header_layout"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>
