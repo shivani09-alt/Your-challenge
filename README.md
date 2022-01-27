@@ -10,5 +10,6 @@ Steps to install project:-
 
 step 1: download  project from clone 
 step 2: Unzip downloaded project and open in android studio
-step 3: Run the project
+step 3: Set Gradle version 7.0.2
+step 4: Run the project
 
